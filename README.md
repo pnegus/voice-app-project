@@ -4,6 +4,7 @@ The goal here is to create the simplest possible messaging/calling app for learn
 
 **Client spec:**
 
+- Written in python using pyqt.
 - The client requires a server backend (hostname) to authenticate with. The server is intended to be self-hosted.
 - Once the client is given a host, it will attempt to authenticate the user using google-backed OAuth.
 - Once authenticated, it will load into a simple landing page with a user friends list and chats with an option to voice call from this friends list.
@@ -13,7 +14,8 @@ The goal here is to create the simplest possible messaging/calling app for learn
 
 **Server spec:**
 
-- The server should maintain a local persistent database.
+- Written in python using flask.
+- The server should maintain a local sqLite database.
 - This database needs to maintain a user list, friends list (indexed via user ID), message list (indexed via user ID), group chat list (indexed via a unique group chat ID that links to each user in the group chat).
 - The server needs to redirect the client to the Google OAuth backend and then register/authenticate the client. It needs to support a client whitelist.
 - Once the client is registered the server needs to pass the client a JWT.
