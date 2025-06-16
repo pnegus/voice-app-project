@@ -14,7 +14,7 @@ The goal here is to create the simplest possible messaging/calling app for learn
 
 **Server spec:**
 
-- Written in python using flask.
+- Written in go using the net/http server to accept reverse proxied traffic from nginx
 - The server should maintain a local sqLite database.
 - This database needs to maintain a user list, friends list (indexed via user ID), message list (indexed via user ID), group chat list (indexed via a unique group chat ID that links to each user in the group chat).
 - The server needs to redirect the client to the Google OAuth backend and then register/authenticate the client. It needs to support a client whitelist.
